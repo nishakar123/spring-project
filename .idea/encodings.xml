@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/auth2-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core-commons/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/file-handling-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/kafka-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/registry-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-new-features/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vehicle-parking-service/src/main/java" charset="UTF-8" />
+  </component>
+</project>
