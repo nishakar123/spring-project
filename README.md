@@ -1,10 +1,10 @@
-
+## Repo Details
 | WebSite   | REPO                           |
 |-----------|--------------------------------|
 | GitHub    | https://github.com/nishakar123 |
 | BitBucket | https://bitbucket.org/nishakar123 |
 
-
+---
 ## Service Port
 * api-gateway : 9091
 * auth2-service : 9000
@@ -17,11 +17,116 @@
 * kafka-producer : 8083
 * kafka-consumer : 8084
 ---
+## How do I get set up?
+* To Build the project
+  * mvn clean
+  * mvn clean install
+  * To run **mvn clean install**, db setup is mandatory and service to be started so build will be successful.
+* Install Git
+  * https://git-scm.com/download/win
+* Install Java
+  * https://www.oracle.com/in/java/technologies/downloads/
+  * https://jdk.java.net/
+* Install Maven
+  * https://maven.apache.org/download.cgi
+* Install Postgres
+  * https://www.postgresql.org/download/ (recommended)
+  * https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+---
+## Installing Git
+Run the downloaded executable file to install Git in system.  
+![img_4.png](img_4.png)
+---
+## Installing Java
+Simply run the executable file to install java and set the installed java path to environment variable.
+![img_6.png](img_6.png)
+---
+## Installing Maven
+Simply extract the downloaded zip file to any location and set the installed maven bin path to environment variable.
+Better to set one new Key with MAVEN_HOME.  
+New Key : ![img.png](img.png)  
+Path Variable : ![img_1.png](img_1.png)
+---
 ## To see tree structure of project
 * Install tree first on Windows
 > winget install tree
 * run below cmd from root project to see project tree structure
 > tree /F
+---
+## Kill the process running on PORT on windows system
+* Step1: Find the running process PID with port no.
+
+      C:\Users\nisha>netstat -ano | findstr :8888
+      TCP    0.0.0.0:8888           0.0.0.0:0              LISTENING       17200
+      TCP    [::]:8888              [::]:0                 LISTENING       17200
+* Step2: Kill the process with PID
+
+      C:\Users\nisha>taskkill /PID 17200 /F
+---
+## Swagger Implementation
+* Step1: Below Dependency needs to be added.
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.8.13</version>
+        </dependency>
+* Step2: Hit the URL: http://localhost:8086/swagger-ui/index.html#
+---
+## Installing and Configuring Postgres
+* Step1 : Check postgres installed version
+  * postgres --version
+* Step2 : If postgres not installed then do the below steps
+  * Download the postgres archive from https://www.postgresql.org/download/
+  * Unzip it and keep it in any directory
+  * Set the bin directory path in environment variable
+    * ![img_5.png](img_5.png)
+  * Repeat Step1 to check postgres version
+* Step3 : Go to installed postgres pgsql directory
+  * C:\pgsql>
+* Step4 : Initialize database(data) directory using below cmd
+  * C:\pgsql>initdb -D data
+* Step5 : Go to initialized data directory
+  * C:\pgsql>cd data
+* Step6 : Start the postgres service
+  * C:\pgsql\data>pg_ctl -D . -l logfile start
+* Step7 : To check and restart the postgres service
+  * C:\pgsql\data>pg_ctl -D . status - To check the service running status
+  * C:\pgsql\data>pg_ctl -D . -l logfile restart - To restart the service
+  * C:\pgsql\data>pg_ctl -D . -l logfile stop - To stop the service
+* Step8 : Create new user
+  * C:\pgsql\data>createuser -d --role=nisha -P -r -s nishakar
+    * nisha is home directory, same we need to enter in role while creating new user
+      * To check username open cmd and see **C:\Users\nisha>**
+    * nishakar is new user which we are creating
+    * it will ask for a password, you can give your own password(root@123)
+* Step9 : Create database(DB)
+  * C:\pgsql\data>createdb -O nishakar nishakardb
+    * nishakar is role name, same while creating the user we have given
+    * nishakardb is the db name, we can give our own db name
+* Step10 : Connect to newly created db
+  * C:\pgsql\data>psql -d nishakardb -U nishakar
+    * nishakardb is newly created db name
+    * nishakar is newly created user
+    * it will connect to db and open the sql run cmd where we can run sql query
+      * nishakardb=#
+    * nishakardb=# \du - list all user
+    * nishakardb=# \l - list all database
+    * nishakardb=# exit - will comeout from sql cmd
+* Step11 : Some important sql cmd
+  * drop role <role_name>;
+  * drop database <database_name>
+
+  * GRANT TEMP ON DATABASE nishakardb TO nishakar;
+  * GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO nishakar;
+  * GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO nishakar;
+  * GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO nishakar;
+
+  * ALTER ROLE <role_name> WITH PASSWORD '<new_password>';
+  * ALTER ROLE <role_name> WITH PASSWORD '<new_password>' 'December 31, 2020';
+  * ALTER USER <role_name> WITH PASSWORD '<new_password>';
+  * ALTER USER <role_name> VALID UNTIL 'Jan 1, 2015';
+  * ALTER USER <role_name> VALID UNTIL 'infinity';
 ---
 ## Kafka Installation Guide
 ### ⚠️ IMPORTANT (Kafka 4.x KRaft not Zookeeper)
@@ -144,4 +249,6 @@ Topic: quickstart-events        Partition: 0    Leader: 1       Replicas: 1     
 * Now that you reached the end of the quickstart, feel free to tear down the Kafka environment—or continue playing around.
     * Stop the producer and consumer clients with Ctrl-C, if you haven't done so already.
     * Stop the Kafka broker with Ctrl-C.
+---
+
 
