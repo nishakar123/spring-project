@@ -1,18 +1,26 @@
 ## Repo Details
-| WebSite   | REPO                           |
-|-----------|--------------------------------|
-| GitHub    | https://github.com/nishakar123 |
-| BitBucket | https://bitbucket.org/nishakar123 |
-
+| WebSite                  | REPO                                                      |
+|--------------------------|-----------------------------------------------------------|
+| spring-project           | https://github.com/nishakar123/spring-project             |
+| registry-service         | https://github.com/nishakar123/registry-service           |
+| config-server            | https://github.com/nishakar123/config-server              |
+| api-gateway              | https://github.com/nishakar123/api-gateway                |
+| auth-service             | https://github.com/nishakar123/auth-service               |
+| auth2-service            | https://github.com/nishakar123/auth2-service              |
+| spring-boot-new-features | https://github.com/nishakar123/spring-boot-new-features   |
+| file-handling-service    | https://github.com/nishakar123/file-handling-service      |
+| vehicle-parking-service  | https://github.com/nishakar123/vehicle-parking-service    |
+| kafka-producer           | https://github.com/nishakar123/kafka-producer             |
+| kafka-consumer           | https://github.com/nishakar123/kafka-consumer             |
 ---
 ## Service Port
-* api-gateway : 9091
-* auth2-service : 9000
-* auth-service : 9001
-* config-server : 8888
-* file-handling-service : 8081
 * registry-service : 8761
+* config-server : 8888
+* api-gateway : 9091
+* auth-service : 9001
+* auth2-service : 9000
 * spring-boot-new-features : 8080
+* file-handling-service : 8081
 * vehicle-parking-service : 8082
 * kafka-producer : 8083
 * kafka-consumer : 8084
