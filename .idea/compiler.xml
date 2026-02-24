@@ -45,7 +45,7 @@
         </processorPath>
         <module name="spring-boot-new-features" />
       </profile>
-      <profile name="Annotation profile for kafka-consumer" enabled="true">
+      <profile name="Annotation profile for vehicle-parking-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -59,8 +59,8 @@
         <module name="auth2-service" />
         <module name="auth-service" />
         <module name="file-handling-service" />
-        <module name="kafka-consumer" />
         <module name="vehicle-parking-service" />
+        <module name="kafka-consumer" />
         <module name="kafka-producer" />
         <module name="api-gateway" />
       </profile>
@@ -78,7 +78,7 @@
       <module name="kafka-producer" options="-parameters -Amapstruct.defaultComponentModel=spring" />
       <module name="registry-service" options="-parameters" />
       <module name="spring-boot-new-features" options="-parameters -XDcompilePolicy=simple --should-stop=ifError=FLOW &quot;-Xplugin:ErrorProne -Xep:NullAway:ERROR -XepOpt:NullAway:OnlyNullMarked&quot; -J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED -J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED -J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED -J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED -Amapstruct.defaultComponentModel=spring" />
-      <module name="vehicle-parking-service" options="-parameters" />
+      <module name="vehicle-parking-service" options="-parameters -Amapstruct.defaultComponentModel=spring" />
     </option>
   </component>
 </project>
