@@ -1,17 +1,17 @@
 ## Repo Details
-| WebSite                  | REPO                                                      |
-|--------------------------|-----------------------------------------------------------|
-| spring-project           | https://github.com/nishakar123/spring-project             |
-| registry-service         | https://github.com/nishakar123/registry-service           |
-| config-server            | https://github.com/nishakar123/config-server              |
-| api-gateway              | https://github.com/nishakar123/api-gateway                |
-| auth-service             | https://github.com/nishakar123/auth-service               |
-| auth2-service            | https://github.com/nishakar123/auth2-service              |
-| spring-boot-new-features | https://github.com/nishakar123/spring-boot-new-features   |
-| file-handling-service    | https://github.com/nishakar123/file-handling-service      |
-| vehicle-parking-service  | https://github.com/nishakar123/vehicle-parking-service    |
-| kafka-producer           | https://github.com/nishakar123/kafka-producer             |
-| kafka-consumer           | https://github.com/nishakar123/kafka-consumer             |
+| Service                  | URL                                                     | Swagger                                                                  |
+|--------------------------|---------------------------------------------------------|--------------------------------------------------------------------------|
+| spring-project           | https://github.com/nishakar123/spring-project           |                                                                          |
+| registry-service         | https://github.com/nishakar123/registry-service         | http://localhost:8761/                                                   |
+| config-server            | https://github.com/nishakar123/config-server            |                                                                          |
+| api-gateway              | https://github.com/nishakar123/api-gateway              | http://localhost:9091/swagger-ui/index.html#                             |
+| auth-service             | https://github.com/nishakar123/auth-service             | http://localhost:9001/swagger-ui/index.html#                             |
+| auth2-service            | https://github.com/nishakar123/auth2-service            | http://localhost:9000/swagger-ui/index.html#                             |
+| spring-boot-new-features | https://github.com/nishakar123/spring-boot-new-features | http://localhost:8080/api/spring-boot-new-features/swagger-ui/index.html |
+| file-handling-service    | https://github.com/nishakar123/file-handling-service    | http://localhost:8081/swagger-ui/index.html#                             |
+| vehicle-parking-service  | https://github.com/nishakar123/vehicle-parking-service  | http://localhost:8082/swagger-ui/index.html#                             |
+| kafka-producer           | https://github.com/nishakar123/kafka-producer           | http://localhost:8083/swagger-ui/index.html#                             |
+| kafka-consumer           | https://github.com/nishakar123/kafka-consumer           | http://localhost:8084/swagger-ui/index.html#                             |
 ---
 ## Service Port
 * registry-service : 8761
