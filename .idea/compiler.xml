@@ -45,7 +45,7 @@
         </processorPath>
         <module name="spring-boot-new-features" />
       </profile>
-      <profile name="Annotation profile for vehicle-parking-service" enabled="true">
+      <profile name="Annotation profile for file-handling-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
